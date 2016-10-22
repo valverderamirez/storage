@@ -12,8 +12,8 @@ public class lab {
 		// daysf ();
 		 
 		 //rangos ();
-		   
-	
+		//arrays();
+		cube_1();
 	}
 	
 	public static  void  daysf ()
@@ -31,11 +31,53 @@ public class lab {
 		{
 			System.out.println(dia);
 		}
+			
+	}
+
+	
+	public static void cube_1()
+	{
 		
 		
+   int [] [] [] cubo= new int [3] [3] [3];
+   int n=0;
+   
+   for (int prof=0; prof < cubo.length; prof++)
+   {  
+		for ( int fila=0; fila < cubo[prof].length ; fila++)
+		{
+			for  (int col =0; col< cubo[prof] [fila].length ; col++)
+			{
+				cubo [prof] [fila] [col]=++n;
+				System.out.print(cubo [prof] [fila] [col] + " ");				
+			}
+			
+			System.out.println();
+		}
+   }	
+		
+	}
+	
+	public static void arrays()
+	{
 		int[] v1 = {1,2,3,4};
 		
 		int[] v2= new int [v1.length ];
+		
+   int [] [] a1={
+		   		{1,2,3},
+		   		{4,5,6},
+		   		{7,8,9}
+   				};
+		for ( int fila=0; fila < a1.length; fila++)
+		{
+			for  (int col =0; col< a1[fila].length ; col++)
+			{
+				System.out.print(a1[fila][col] + " ");				
+			}
+			
+			System.out.println();
+		}
 		
 		
 	}
