@@ -14,7 +14,7 @@ public class lab {
 		 //rangos ();
 		//arrays();
 		//cube_1();
- //lab1();
+lab1();
 	}
 	
 
