@@ -3,6 +3,7 @@ package testRun;
 import java.util.Scanner;
 
 
+
 public class lab {
 
 	
@@ -10,11 +11,17 @@ public class lab {
 	
 		
 		// daysf ();
-		 
 		 //rangos ();
 		//arrays();
-		cube_1();
+		//cube_1();
+ //lab1();
 	}
+	
+
+
+
+		
+	
 	
 	public static  void  daysf ()
 	{
@@ -34,6 +41,57 @@ public class lab {
 			
 	}
 
+
+	public static void lab1()
+	{
+int[] [] a1 = new int [4][4];
+		
+
+		for ( int fila=0; fila < a1.length; fila++)
+		{
+			for  (int col =0; col< a1[fila].length ; col++)
+			{
+				//System.out.print(a1[fila][col] + " ");
+				
+				a1[fila][col]=(int) (Math.random()*25+1);
+				
+				//System.out.print(a1[fila][col] + " ");
+
+			}
+			
+			//System.out.println();
+		}	
+		
+		for ( int fila=0; fila < a1.length; fila++)
+		{
+			for  (int col =0; col< a1[fila].length ; col++)
+			{
+				
+				if (a1[fila][col] % 2 == 0)
+					{
+					a1[fila][col]=0;
+					}
+				//System.out.print(a1[fila][col] + " ");
+			}
+			
+			//System.out.println();
+		}	
+
+		for ( int fila=0; fila < a1.length; fila++)
+		{
+			for  (int col =0; col< a1[fila].length ; col++)
+			{
+				
+				System.out.print(a1[fila][col] + " ");
+			}
+			
+			System.out.println();
+		}	
+		
+		
+	}
+	
+	
 	
 	public static void cube_1()
 	{
