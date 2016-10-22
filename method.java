@@ -11,7 +11,7 @@ public class method {
 	print(array) ;
 	*/
 	///////////////////////
-	
+	/*
 	int numero=7;
 	print(numero);
 	System.out.println(numero);
@@ -26,6 +26,11 @@ public class method {
 	
 	
 	imprimirpalabras ("a","b","c","d","e");
+	imprime(29);
+	*/
+	
+	int f=fib(6);
+	System.out.println(f);
 	
 	}
 	
@@ -40,12 +45,43 @@ public class method {
 		
 	}
 	
+	
+	public static void imprime(int numero)
+	{
+		
+		if (numero>0 )
+		{
+			numero--;
+			imprime(numero);
+			System.out.println(numero);			
+		}
+		else 
+		{
+			return;
+		}
+	}
+	
 	public static void hola()
 	{
 		
 		System.out.println("hola");
 		
 	}
+	
+	
+	public static int fib(int num)
+	{
+		
+		if (num==0 || num==1)
+		{
+			return num;			
+		}
+		else
+		{
+			return fib(num-1) + fib(num-2);
+		}
+	}
+	
 	
 	public static void print(Persona p)
 	{
