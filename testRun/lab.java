@@ -1,8 +1,18 @@
 package testRun;
 
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 
 import m7interface.Ave;
@@ -83,17 +93,53 @@ public class lab {
 			
 			System.out.println("tiempo: " + result);
 			
+			
+			try {
+			leerArchivo("text.txt");
+			} catch (IOException e)
+			{  e.printStackTrace();}
+	
 	}
 	
-
-
-
+	public static void leerArchivo (String archivo) throws IOException
+	{
 		
+		Path path= Paths.get(archivo);
+
+
+			List<String> lineas = Files.readAllLines(path);
+			for (String  linea : lineas )
+			{ System.out.println(linea);}
+		
+	}
+
+	public static void leerLxL (String archivo) throws IOException
+	{
+		FileReader fr = new FileReader(archivo);
+		BufferedReader br = new BufferedReader(fr);
+		
+		while (br.ready())
+		{  System.out.println(br.readLine());}
+			
+		br.close();
+		
+	}
+		
+	public static void escribir (String archivo, String texto) throws IOException
+	{
+		FileWriter fw = new FileWriter(archivo, true);
+		BufferedWriter writer= new BufferedWriter(fw);
+		
+		writer.newLine();
+		writer.write(texto);
+        writer.close();		
+	}
+	
+	
 	
 	
 	public static  void  daysf ()
-	{
-		String[] dias= {"Lunes",
+	{		String[] dias= {"Lunes",
 				"Martes",
 				"Miercoles",
 				"Jueves",
